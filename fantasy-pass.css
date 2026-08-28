@@ -61,16 +61,12 @@ header:after{
   opacity:1;
   filter:none;
   background:
-    /* fortress towers */
     linear-gradient(90deg,transparent 0 51%,#0b1012 51% 54%,transparent 54%) 0 0/100% 100% no-repeat,
     linear-gradient(90deg,transparent 0 59%,#0a0f11 59% 62%,transparent 62%) 0 0/100% 100% no-repeat,
     linear-gradient(90deg,transparent 0 67%,#0a0f11 67% 70%,transparent 70%) 0 0/100% 100% no-repeat,
-    /* tower crowns */
     conic-gradient(from 45deg at 53% 53%,transparent 0 25%,#0a0f11 0 50%,transparent 0) 0 0/100% 100% no-repeat,
-    /* near mountain */
     linear-gradient(145deg,transparent 0 47%,#0b1012 47% 62%,transparent 62%) 0 100%/100% 83% no-repeat,
     linear-gradient(35deg,transparent 0 49%,#090d0f 49% 67%,transparent 67%) 0 100%/100% 74% no-repeat,
-    /* far mountain */
     linear-gradient(155deg,transparent 0 50%,rgba(17,27,28,.86) 50% 65%,transparent 65%) 0 100%/92% 95% no-repeat,
     linear-gradient(25deg,transparent 0 54%,rgba(18,29,29,.82) 54% 69%,transparent 69%) 0 100%/88% 91% no-repeat;
   mask-image:linear-gradient(to left,black 78%,transparent 100%);
@@ -135,6 +131,18 @@ header:after{
   z-index:0;
 }
 .endgame>div,.endgame>ol{position:relative;z-index:1}
+.endgame-copy{min-width:0}
+.encounters{display:grid;gap:12px;margin-top:34px}
+.encounters article{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;padding:18px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(90deg,rgba(255,255,255,.025),rgba(255,255,255,.008));position:relative;overflow:hidden}
+.encounters article:before{content:"";position:absolute;inset:0 auto 0 0;width:2px;background:linear-gradient(180deg,transparent,rgba(210,175,103,.55),transparent)}
+.encounters article:last-child:before{background:linear-gradient(180deg,transparent,rgba(164,74,64,.65),transparent)}
+.encounter-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(210,175,103,.28);font:600 12px Cinzel,serif;color:var(--gold2);transform:rotate(45deg)}
+.encounter-mark::first-line{transform:rotate(-45deg)}
+.encounter-mark.boss{color:#d66a5e;border-color:rgba(164,74,64,.38)}
+.encounters small{font-size:8px;letter-spacing:.14em;color:var(--gold)}
+.encounters h3{margin:4px 0 5px;font:600 17px Cinzel,serif}
+.encounters p{margin:0;color:#8f9895;font-size:11px;line-height:1.55}
+.encounters article>b{align-self:start;padding:6px 8px;border:1px solid rgba(255,255,255,.07);font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:#7f8885;white-space:nowrap}
 
 @media(max-width:960px){
   header{padding-inline:20px}
@@ -150,6 +158,9 @@ header:after{
   .sky:after{right:-370px;height:340px;opacity:.5}
   .hero-copy{padding-top:76px}
   .realm{background:rgba(13,17,19,.93)}
+  .encounters article{grid-template-columns:40px 1fr;gap:14px;padding:15px}
+  .encounter-mark{width:36px;height:36px}
+  .encounters article>b{grid-column:2;justify-self:start;margin-top:-4px}
 }
 
 @media(prefers-reduced-motion:reduce){
