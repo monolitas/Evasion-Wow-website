@@ -144,15 +144,84 @@ header:after{
 .encounters p{margin:0;color:#8f9895;font-size:11px;line-height:1.55}
 .encounters article>b{align-self:start;padding:6px 8px;border:1px solid rgba(255,255,255,.07);font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:#7f8885;white-space:nowrap}
 
+/* System-navigation hierarchy pass */
+nav a{
+  position:relative;
+  padding:10px 0;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  transition:color .2s ease;
+}
+nav a:after{
+  content:"";
+  position:absolute;
+  left:50%;right:50%;bottom:3px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold2),transparent);
+  transition:left .2s ease,right .2s ease;
+}
+nav a:hover:after,nav a:focus-visible:after{left:0;right:0}
+nav a:focus-visible,.discord:focus-visible,.btn:focus-visible{
+  outline:1px solid rgba(240,210,138,.72);
+  outline-offset:4px;
+}
+
+#world,#pvp,#endgame,#join{scroll-margin-top:96px}
+.manifesto,.pvp,.endgame,.join{position:relative}
+.manifesto:before,.pvp:before,.join:before{
+  content:"";
+  position:absolute;
+  left:50%;top:0;
+  width:min(760px,72vw);height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(210,175,103,.18),transparent);
+}
+.pvp:after,.join:after{
+  content:"◆";
+  position:absolute;
+  left:50%;top:-6px;
+  transform:translateX(-50%);
+  color:rgba(210,175,103,.48);
+  background:var(--bg);
+  padding:0 12px;
+  font-size:9px;
+}
+
 @media(max-width:960px){
   header{padding-inline:20px}
   .sky:before{right:70px;top:105px;opacity:.48}
   .sky:after{right:-260px;opacity:.72}
   .hero-copy:before{display:none}
+
+  /* Keep the world systems reachable instead of hiding navigation entirely. */
+  header{height:auto;min-height:72px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:0}
+  nav{
+    display:flex;
+    grid-column:1/-1;
+    grid-row:2;
+    width:100%;
+    gap:0;
+    overflow-x:auto;
+    scrollbar-width:none;
+    border-top:1px solid rgba(255,255,255,.045);
+    mask-image:linear-gradient(90deg,transparent 0,black 18px,black calc(100% - 18px),transparent 100%);
+  }
+  nav::-webkit-scrollbar{display:none}
+  nav a{
+    flex:1 0 auto;
+    min-width:112px;
+    padding:11px 18px 12px;
+    text-align:center;
+    font-size:9px;
+    color:#969e9b;
+  }
+  nav a+ a{border-left:1px solid rgba(255,255,255,.04)}
+  nav a:after{bottom:0}
+  #world,#pvp,#endgame,#join{scroll-margin-top:118px}
 }
 
 @media(max-width:640px){
-  header{width:100%;padding-inline:14px}
+  header{width:100%;padding-inline:14px;grid-template-columns:1fr auto}
   .hero{min-height:auto}
   .sky:before{width:88px;height:88px;right:28px;top:90px;opacity:.34}
   .sky:after{right:-370px;height:340px;opacity:.5}
@@ -161,6 +230,12 @@ header:after{
   .encounters article{grid-template-columns:40px 1fr;gap:14px;padding:15px}
   .encounter-mark{width:36px;height:36px}
   .encounters article>b{grid-column:2;justify-self:start;margin-top:-4px}
+
+  header .brand{min-width:0}
+  nav{margin-inline:-14px;width:calc(100% + 28px);padding-inline:8px}
+  nav a{min-width:92px;padding-inline:13px;font-size:8px;letter-spacing:.1em}
+  .manifesto:before,.pvp:before,.join:before{width:82vw}
+  #world,#pvp,#endgame,#join{scroll-margin-top:112px}
 }
 
 @media(prefers-reduced-motion:reduce){
