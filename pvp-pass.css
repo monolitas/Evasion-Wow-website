@@ -1,0 +1,29 @@
+/* PvP readability pass: present conflict states like an in-world reputation interface. */
+.pvp-frame{background:linear-gradient(180deg,rgba(12,16,18,.96),rgba(7,9,11,.92));box-shadow:0 34px 100px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.025)}
+.pvp-frame-title{position:relative;border-bottom:1px solid rgba(255,255,255,.055);margin-inline:-22px;padding-inline:22px;background:linear-gradient(90deg,rgba(210,175,103,.025),transparent 42%,rgba(164,74,64,.025))}
+.pvp-frame-title:after{content:"";position:absolute;left:22px;right:22px;bottom:-1px;height:1px;background:linear-gradient(90deg,rgba(171,184,181,.22),rgba(210,175,103,.35) 50%,rgba(164,74,64,.34))}
+.state-card{isolation:isolate;padding-bottom:78px;transition:border-color .22s ease,background .22s ease,transform .22s ease}
+.state-card:before{content:"";position:absolute;z-index:-1;left:0;top:0;bottom:0;width:3px;background:currentColor;opacity:.46}
+.state-card:hover{transform:translateY(-2px)}
+.state-card.neutral{background:linear-gradient(145deg,rgba(154,169,167,.035),rgba(255,255,255,.006) 58%)}
+.state-card.flagged{background:radial-gradient(circle at 50% 0,rgba(210,175,103,.10),transparent 36%),linear-gradient(145deg,rgba(210,175,103,.045),rgba(255,255,255,.006) 62%)}
+.state-card.criminal{background:radial-gradient(circle at 50% 0,rgba(164,74,64,.13),transparent 38%),linear-gradient(145deg,rgba(164,74,64,.055),rgba(255,255,255,.006) 62%)}
+.state-card .icon{position:relative;transform:rotate(45deg);border-radius:2px;background:rgba(0,0,0,.18)}
+.state-card .icon:after{content:"";position:absolute;inset:5px;border:1px solid currentColor;opacity:.18}
+.state-card small{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.state-card small:before{content:"";width:18px;height:1px;background:currentColor;opacity:.6}
+.state-card>b{position:absolute;left:28px;right:28px;bottom:26px;margin:0;padding-top:15px;text-transform:uppercase;letter-spacing:.08em}
+.karma-track{margin-top:2px;padding-top:24px;padding-bottom:16px}
+.karma-track>div{height:4px;border:1px solid rgba(255,255,255,.05);background:linear-gradient(90deg,#65716f 0 24%,#b89a5e 42% 58%,#8d4039 76% 100%);box-shadow:0 0 24px rgba(0,0,0,.45) inset}
+.karma-track>div:before,.karma-track>div:after{position:absolute;top:12px;font-size:7px;letter-spacing:.11em;color:#606866;white-space:nowrap}
+.karma-track>div:before{content:"FIGHTING";left:50%;transform:translateX(-50%)}
+.karma-track>div:after{content:"MURDER";right:0;color:#7f4641}
+.examples{box-shadow:inset 0 1px rgba(255,255,255,.018)}
+.examples-head{background:rgba(255,255,255,.012)}
+.example-grid>div{position:relative;min-height:82px;transition:background .2s ease}
+.example-grid>div:hover{background:rgba(210,175,103,.025)}
+.example-grid>div:nth-child(3):hover{background:rgba(164,74,64,.035)}
+.example-grid i{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(210,175,103,.16);font-size:14px;background:rgba(0,0,0,.14)}
+.example-grid i.blood{border-color:rgba(164,74,64,.26)}
+@media(max-width:960px){.pvp-frame-title{margin-inline:-16px;padding-inline:16px}.state-card>b{position:static;margin-top:28px}.state-card{padding-bottom:28px}.state-card:hover{transform:none}}
+@media(max-width:640px){.pvp-frame-title{height:46px}.karma-track>div:before,.karma-track>div:after{display:none}.example-grid>div{min-height:0}.state-card .icon{margin-bottom:30px}}
