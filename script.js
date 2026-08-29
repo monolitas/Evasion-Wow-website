@@ -1,6 +1,30 @@
-const SERVER={discord:'https://discord.gg/replace-me',realmlist:'logon.example.com'};document.querySelectorAll('[data-discord]').forEach(a=>a.href=SERVER.discord);document.querySelectorAll('[data-realmlist]').forEach(e=>e.textContent=SERVER.realmlist);const copy=document.getElementById('copy'),out=document.getElementById('copyText');copy?.addEventListener('click',async()=>{const t=`set realmlist ${SERVER.realmlist}`;try{await navigator.clipboard.writeText(t);copy.textContent='Copied';out.textContent='Copied to clipboard';setTimeout(()=>{copy.textContent='Copy Realmlist';out.innerHTML=`set realmlist <span data-realmlist>${SERVER.realmlist}</span>`},1600)}catch{out.textContent=t}});
+const SERVER = {
+  name: "EVASION",
+  realmName: "Evasion",
+  realmlist: "logon.example.com",
+  discord: "https://discord.gg/replace-me",
+  realmState: "DEVELOPMENT"
+};
 
-// Connected-world presentation pass. Kept as progressive enhancement so the base page remains usable without JS.
-if(!document.querySelector('link[href="world-pass.css"]')){const style=document.createElement('link');style.rel='stylesheet';style.href='world-pass.css';document.head.appendChild(style)}
+document.querySelectorAll("[data-realm-name]").forEach(el => el.textContent = SERVER.realmName);
+document.querySelectorAll("[data-realmlist]").forEach(el => el.textContent = SERVER.realmlist);
+document.querySelectorAll("[data-realm-state]").forEach(el => el.textContent = SERVER.realmState);
+document.querySelectorAll("[data-discord]").forEach(el => el.href = SERVER.discord);
 
-(()=>{const cards=document.querySelector('.cards');if(!cards||document.querySelector('.world-loop'))return;const section=document.createElement('section');section.className='world-loop';section.setAttribute('aria-label','How the open world connects');section.innerHTML=`<div class="world-loop-head"><div><p class="kicker">ONE CONNECTED WORLD</p><h2>Every system feeds<br><em>the next conflict.</em></h2></div><p>Factionless social play, open dungeons and public raid bosses are not separate features. They create a loop where information, reputation and control of space keep dragging players back into the same living world.</p></div><div class="loop-grid"><article class="loop-step"><small>01 · MEET</small><h3>No faction wall.</h3><p>Group with anyone, trade with anyone and build guilds around people rather than race colour.</p><b>Relationships become player-made.</b></article><article class="loop-step"><small>02 · ENTER</small><h3>Open dungeons.</h3><p>Progression spaces stay physically connected to everyone else. Rival groups can arrive while you are already inside.</p><b>Routes and timing matter.</b></article><article class="loop-step raid"><small>03 · CONTEST</small><h3>World raid bosses.</h3><p>Bosses belong to the world, not a private instance. Scouting, denial and mobilisation become part of PvE success.</p><b>Ownership is temporary.</b></article><article class="loop-step"><small>04 · REMEMBER</small><h3>Karma and grudges.</h3><p>How you fought matters after the loot is gone. Reputation, outlaw status and guild politics carry into the next encounter.</p><b>The world keeps the score.</b></article></div><div class="world-law"><span>FACTIONLESS</span><i></i><b>OPEN DUNGEONS · PUBLIC RAID BOSSES · KARMA PVP</b></div>`;cards.insertAdjacentElement('afterend',section)})();
+const copyButton = document.getElementById("copy");
+const copyResult = document.getElementById("copyText");
+
+copyButton?.addEventListener("click", async () => {
+  const value = `set realmlist ${SERVER.realmlist}`;
+  try {
+    await navigator.clipboard.writeText(value);
+    copyButton.textContent = "Copied";
+    copyResult.textContent = "Copied to clipboard";
+    setTimeout(() => {
+      copyButton.textContent = "Copy realmlist";
+      copyResult.innerHTML = `set realmlist <span data-realmlist>${SERVER.realmlist}</span>`;
+    }, 1800);
+  } catch {
+    copyResult.textContent = value;
+  }
+});
