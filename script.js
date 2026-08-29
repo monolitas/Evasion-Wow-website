@@ -28,3 +28,31 @@ copyButton?.addEventListener("click", async () => {
     copyResult.textContent = value;
   }
 });
+
+// Simple visual-art pass: load repo-hosted artwork directly into the live site.
+if (!document.querySelector('link[href="art-pass.css"]')) {
+  const artStyles = document.createElement("link");
+  artStyles.rel = "stylesheet";
+  artStyles.href = "art-pass.css";
+  document.head.appendChild(artStyles);
+}
+
+const brand = document.querySelector(".brand");
+if (brand) {
+  brand.innerHTML = '<img class="brand-art" src="assets/evasion-logo.svg" alt="Evasion">';
+}
+
+const heroScene = document.querySelector(".hero-scene");
+if (heroScene) {
+  heroScene.innerHTML = '<img class="hero-art" src="assets/hero-moonlit.svg" alt="">';
+}
+
+const heroContent = document.querySelector(".hero-content");
+const heroEyebrow = heroContent?.querySelector(".eyebrow");
+if (heroContent && heroEyebrow && !heroContent.querySelector(".hero-wordmark")) {
+  const wordmark = document.createElement("img");
+  wordmark.className = "hero-wordmark";
+  wordmark.src = "assets/evasion-logo.svg";
+  wordmark.alt = "Evasion";
+  heroEyebrow.insertAdjacentElement("afterend", wordmark);
+}
