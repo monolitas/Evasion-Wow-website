@@ -16,7 +16,7 @@ const observer=new IntersectionObserver(entries=>{
   });
 },{threshold:.08});
 
-document.querySelectorAll(".feature-card,.vision-grid article,.state,.dungeon-grid article,.shot-placeholder,.roadmap-grid span").forEach(el=>{
+document.querySelectorAll(".feature-card,.vision-grid article,.state,.dungeon-grid article").forEach(el=>{
   el.classList.add("reveal");
   observer.observe(el);
 });
