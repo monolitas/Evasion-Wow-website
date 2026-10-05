@@ -1,22 +1,19 @@
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-  link.addEventListener("click",e=>{
-    const target=document.querySelector(link.getAttribute("href"));
-    if(!target)return;
-    e.preventDefault();
-    target.scrollIntoView({behavior:"smooth",block:"start"});
-  });
+const toggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#navigation');
+function closeNavigation() {
+  navigation.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+}
+toggle.addEventListener('click', () => {
+  const open = toggle.getAttribute('aria-expanded') !== 'true';
+  toggle.setAttribute('aria-expanded', String(open));
+  navigation.classList.toggle('open', open);
 });
-
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:.08});
-
-document.querySelectorAll(".feature-card,.vision-grid article,.state,.dungeon-grid article").forEach(el=>{
-  el.classList.add("reveal");
-  observer.observe(el);
+navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNavigation));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+    closeNavigation();
+    toggle.focus();
+  }
 });
+// No fake sign-up form, account collection, online counts or unavailable download buttons.

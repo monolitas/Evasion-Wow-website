@@ -1,247 +1,92 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#08090d" />
-  <meta name="description" content="Evasion is a private-alpha custom World of Warcraft 3.3.5a server built around open-world PvP, Karma, clan warfare, shared dungeons and guild progression." />
-  <title>Evasion — A World Where Your Actions Matter</title>
-  <link rel="icon" href="assets/evasion-icon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10161e">
+  <meta name="description" content="Evasion Worlds is a custom 3.3.5a MMORPG in closed alpha. A shared world of guild rivalry, contested dungeons and consequential PvP.">
+  <meta property="og:title" content="Evasion Worlds — A world shaped by its players">
+  <meta property="og:description" content="Shared dungeons. Guild rivalries. A world worth fighting for. Closed alpha, by invitation.">
+  <meta property="og:image" content="https://monolitas.github.io/Evasion-Wow-website/assets/mist-world.png">
+  <title>Evasion Worlds · Closed Alpha</title>
+  <link rel="icon" href="assets/evasion-worlds-mark.png" type="image/png">
+  <link rel="preload" href="assets/mist-world.png" as="image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Evasion home">
-      <img src="assets/evasion-logo.svg" alt="Evasion">
-    </a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#vision">Vision</a>
-      <a href="#features">Systems</a>
-      <a href="#pvp">Karma</a>
-      <a href="#clan-wars">Clan Wars</a>
-      <a href="#dungeons">Dungeons</a>
-      <a href="#progress">Progress</a>
-    </nav>
-    <a class="alpha-pill" href="#alpha">Private Alpha</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Evasion Worlds home"><img src="assets/evasion-worlds-mark.png" width="42" height="42" alt=""><span>EVASION <small>WORLDS</small></span></a>
+    <button class="menu-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Open navigation">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="navigation" aria-label="Main navigation"><a href="#world">The world</a><a href="#conflict">Conflict</a><a href="#progress">Development</a><a href="#join">Joining</a></nav>
+    <span class="alpha-label">Closed alpha</span>
   </header>
-
-  <main id="top">
-    <section class="hero section-shell">
-      <div class="hero-art" aria-hidden="true">
-        <img src="assets/hero-moonlit.svg" alt="">
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-content">
+        <img class="hero-mark" src="assets/evasion-worlds-mark.png" width="156" height="156" alt="Gold rings surrounding the Evasion monolith">
+        <p class="wordmark">EVASION <span>WORLDS</span></p>
+        <h1 id="hero-title">A world shaped<br>by its players.</h1>
+        <p class="hero-description">The people you meet become your allies.<br>The places you discover become something to fight for.</p>
+        <a class="text-link" href="#world">Discover the world <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-copy">
-        <p class="eyebrow">World of Warcraft 3.3.5a · custom server · private alpha</p>
-        <h1>Evasion — A World Where Your Actions Matter</h1>
-        <p class="hero-sub">A custom open-world MMORPG experience built around PvP, Karma, clan warfare, shared dungeons, meaningful progression, and valuable loot.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#features">Explore the systems</a>
-          <a class="btn btn-secondary" href="#progress">Development status</a>
+      <div class="hero-foot"><span>Custom 3.3.5a · Build 12340</span><span>By invitation. Still taking shape.</span></div>
+    </section>
+    <section class="chapter world" id="world" aria-labelledby="world-title">
+      <div class="chapter-intro"><p class="eyebrow">01 / A shared world</p><h2 id="world-title">You won’t be<br>farming alone.</h2><p>No private copy waiting behind the dungeon entrance. Your party enters the same place as everyone else.</p></div>
+      <div class="chapter-detail">
+        <article><h3>Familiar places. Different rules.</h3><p>Dungeons and raids become shared farming grounds. Rival groups may cooperate, compete for a boss, or settle things themselves.</p></article>
+        <article><h3>A reason to stay.</h3><p>Dungeon farming offers better returns, while equipment remains uncommon. Crafting matters. Gathering spots deplete. Bosses return on long, randomized timers.</p></article>
+        <article><h3>Earn your claim.</h3><p>Damage decides initial monster-loot ownership, not the first hit. Certain scripted bosses are called with rare items found in their dungeon.</p></article>
+        <p class="margin-note">Shared maps are implemented. Individual encounters and large-group performance are still being tested.</p>
+      </div>
+    </section>
+    <section class="conflict" id="conflict" aria-labelledby="conflict-title">
+      <div class="section-inner">
+        <p class="eyebrow">02 / Rivalry & consequence</p><h2 id="conflict-title">Pick your fights.<br>Live with your choices.</h2>
+        <p class="section-lead">Your name tells a story before you say a word.</p>
+        <div class="pvp-states">
+          <article class="neutral"><span class="state-name">White</span><h3>Neutral</h3><p>Not looking for a fight. Force-attacking a neutral player requires Ctrl.</p></article>
+          <article class="flagged"><span class="state-name">Purple</span><h3>In the fight</h3><p>Taking part in PvP flags you. Other players can attack you freely.</p></article>
+          <article class="karma"><span class="state-name">Red</span><h3>Karma</h3><p>Killing an innocent player has consequences. On death, equipped gear and inventory items can be lost.</p></article>
         </div>
-        <div class="hero-status">
-          <span><i class="dot"></i> Private alpha testing</span>
-          <span>No release date announced</span>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <p class="panel-label">Current build</p>
-        <h2>Playable systems, active testing.</h2>
-        <div class="mini-grid">
-          <div><span>Core PvP</span><strong>Playable alpha</strong></div>
-          <div><span>Clan Wars</span><strong>Playable alpha</strong></div>
-          <div><span>Shared Dungeons</span><strong>Implemented</strong></div>
-          <div><span>Guild Skills</span><strong>Balancing</strong></div>
-        </div>
-        <p class="small-note">Individual dungeon encounters and large-scale behavior still require continued testing.</p>
-      </aside>
-    </section>
-
-    <section class="section section-shell" id="vision">
-      <div class="section-heading">
-        <p class="eyebrow">Server vision</p>
-        <h2>One social world instead of isolated queues.</h2>
-        <p>Evasion is designed around persistent places, recognizable enemies, guild rivalries, contested farming and long-term consequences. Alliance and Horde share the same social world, while PvP status communicates intent and risk.</p>
-      </div>
-      <div class="vision-grid">
-        <article><b>01</b><h3>Shared population</h3><p>Cross-faction grouping, trading, communication, travel and ordinary interaction are supported.</p></article>
-        <article><b>02</b><h3>Consequential PvP</h3><p>White, Purple and Red states make the difference between neutrality, active PvP and Karma visible at a glance.</p></article>
-        <article><b>03</b><h3>Contested PvE</h3><p>Normal dungeons become persistent farming spaces where groups can meet, compete, cooperate or fight.</p></article>
-        <article><b>04</b><h3>Guild identity</h3><p>Permanent Clan Wars, guild levels and shared passive skills turn guild membership into progression and politics.</p></article>
+        <div class="conflict-notes"><p>Red-player drops go into a public grave. No Loot All—each item is a race.</p><p>Party protection and clan-war rules make the distinction between a rival and an ally matter.</p></div>
       </div>
     </section>
-
-    <section class="section section-shell" id="features">
-      <div class="section-heading compact">
-        <p class="eyebrow">Feature overview</p>
-        <h2>The core systems.</h2>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card purple"><span>PvP</span><h3>Open-world PvP</h3><p>Neutral by default. Deliberate attacks turn the aggressor Purple.</p></article>
-        <article class="feature-card red"><span>Karma</span><h3>PK consequences</h3><p>Killing an innocent player adds Karma and turns the killer Red. Higher lifetime PK totals increase the amount of equipment and inventory at risk on death.</p></article>
-        <article class="feature-card gold"><span>War</span><h3>Permanent Clan Wars</h3><p>Guild leaders declare wars that require mutual acceptance. Wars persist until both sides agree to peace and award separate clan-war points.</p></article>
-        <article class="feature-card"><span>PvE</span><h3>Shared open-world dungeons</h3><p>Normal dungeons are shared spaces instead of private party copies.</p></article>
-        <article class="feature-card"><span>Loot</span><h3>Damage-based ownership</h3><p>Top damage earns the initial loot rights; loot opens up later.</p></article>
-        <article class="feature-card"><span>Guilds</span><h3>Guild levels and skills</h3><p>Guild progression unlocks shared passive skills across three branches.</p></article>
-        <article class="feature-card"><span>Death</span><h3>Experience debt</h3><p>Normal PvE and PvP deaths create experience debt. Earned experience pays debt before advancing normal progression.</p></article>
-        <article class="feature-card"><span>World</span><h3>Shared gathering</h3><p>Dungeon herbs and ore use persistent depletion cooldowns and shared spawn pools, with randomized 15–30 minute respawns.</p></article>
+    <section class="chapter" id="guilds" aria-labelledby="guild-title">
+      <div class="chapter-intro"><p class="eyebrow">03 / More than a name</p><h2 id="guild-title">Build a guild.<br>Make a rival.</h2><p>Guild membership is a shared progression track, not just another chat channel.</p></div>
+      <div class="chapter-detail">
+        <article><h3>Grow together.</h3><p>Guild experience and spendable skill points are separate. Leaders unlock shared skills using guild-bank gold and special materials.</p></article>
+        <article><h3>Wars that mean something.</h3><p>Clan wars require both sides to agree, and peace does too. Enemy guilds are clearly marked. War kills do not add Karma or lifetime PK points.</p></article>
+        <article><h3>A town worth taking.</h3><p>The Crossroads siege system includes a capture banner, loyal guards, rally standards and town taxes. Earned treasury balances remain with the guild that earned them.</p></article>
+        <p class="margin-note">Sieges are under controlled testing. Production sieges remain disabled until validation is complete.</p>
       </div>
     </section>
-
-    <section class="section section-shell" id="pvp">
-      <div class="section-heading">
-        <p class="eyebrow">Karma lifecycle</p>
-        <h2>White → Purple → Red.</h2>
-        <p>The system separates neutral players, active combatants and player killers without blocking ordinary social interaction.</p>
-      </div>
-      <div class="state-flow">
-        <article class="state white">
-          <div class="state-mark">W</div>
-          <span>Neutral</span>
-          <h3>White</h3>
-          <p>You are not actively involved in open-world PvP.</p>
-          <ul><li>Normal social interaction</li><li>Party and raid friendly-fire protection</li><li>Ctrl is required to force-attack another neutral</li></ul>
-        </article>
-        <div class="flow-arrow">→</div>
-        <article class="state purple">
-          <div class="state-mark">P</div>
-          <span>Flagged</span>
-          <h3>Purple</h3>
-          <p>Attacking another player flags the aggressor Purple.</p>
-          <ul><li>Can be attacked freely</li><li>PvP flag persists through combat and reconnects</li><li>Supporting combatants follows custom flagging rules</li></ul>
-        </article>
-        <div class="flow-arrow">→</div>
-        <article class="state red">
-          <div class="state-mark">R</div>
-          <span>Karma</span>
-          <h3>Red</h3>
-          <p>Killing an innocent player grants Karma and turns the killer Red.</p>
-          <ul><li>Can still trade, party and interact normally</li><li>Guards attack Red players</li><li>Death can drop inventory items and equipped gear</li></ul>
-        </article>
-      </div>
-      <div class="karma-notes">
-        <div><strong>Karma recovery</strong><p>Karma decreases through legitimate monster progression. Monster experience still reduces Karma while paying experience debt.</p></div>
-        <div><strong>PK graves</strong><p>Dropped items appear inside a public sparkling grave. Multiple players can inspect it and compete to loot the contents.</p></div>
-        <div><strong>Stackable loss</strong><p>Stackable items can lose a random percentage of their stack, with dropped and looted items reported in chat.</p></div>
-      </div>
+    <section class="development section-inner" id="progress" aria-labelledby="progress-title">
+      <div><p class="eyebrow">Where we are</p><h2 id="progress-title">An alpha.<br>Not a promise.</h2><p>We’re building the world, testing its rules and fixing what breaks. There’s no public launch date.</p></div>
+      <dl class="progress-list">
+        <div><dt>PvP, Karma & PK graves</dt><dd>Implemented · regression testing</dd></div>
+        <div><dt>Clan wars & guild skills</dt><dd>Implemented · balance testing</dd></div>
+        <div><dt>Shared dungeons & raids</dt><dd>Implemented · encounter testing</dd></div>
+        <div><dt>Crafting & reveal wards</dt><dd>Implemented · tuning</dd></div>
+        <div><dt>Town sieges & taxes</dt><dd>Controlled testing · not enabled publicly</dd></div>
+        <div><dt>Launcher & friend access</dt><dd>In preparation · download hosting pending</dd></div>
+      </dl>
     </section>
-
-    <section class="section section-shell split" id="clan-wars">
-      <div class="split-copy">
-        <p class="eyebrow">Clan warfare</p>
-        <h2>Wars do not expire because a timer says so.</h2>
-        <p>Guild leaders can declare war on other guilds. A declaration must be accepted, and a guild may participate in multiple wars simultaneously. Peace also requires both sides to agree.</p>
-        <ul class="check-list">
-          <li>Enemy clan members can attack without holding Ctrl.</li>
-          <li>War attacks still flag the aggressor Purple.</li>
-          <li>Clan-war kills grant no Karma and no lifetime PK points.</li>
-          <li>Each clan-war kill awards one clan point.</li>
-          <li>Guild-wide announcements report declarations, acceptance, peace and kills.</li>
-          <li>Crossed-swords indicators identify enemy clan members.</li>
-        </ul>
-      </div>
-      <aside class="ui-mock">
-        <div class="ui-title">Clan Wars</div>
-        <div class="war-row active"><span>Black Dawn</span><b>ACTIVE</b><strong>128</strong></div>
-        <div class="war-row"><span>Ashen Crown</span><b>PENDING</b><strong>—</strong></div>
-        <div class="war-row"><span>Night Watch</span><b>PEACE OFFER</b><strong>64</strong></div>
-        <p>Interface concept: active wars, pending declarations and peace offers.</p>
-      </aside>
-    </section>
-
-    <section class="section section-shell" id="dungeons">
-      <div class="section-heading">
-        <p class="eyebrow">Shared dungeons</p>
-        <h2>Persistent farming spaces, not private copies.</h2>
-        <p>Solo players, parties and raids enter the same supported normal dungeon population. There are no personal dungeon resets.</p>
-      </div>
-      <div class="dungeon-grid">
-        <article><span class="big-number">51</span><h3>Normal dungeon maps</h3><p>All populated normal non-raid dungeon maps are included in the rollout.</p></article>
-        <article><span class="big-number">2–5h</span><h3>Boss respawns</h3><p>Bosses generally use long randomized respawns. Ordinary enemies use shorter randomized timers.</p></article>
-        <article><span class="big-number">5s</span><h3>Rare rituals</h3><p>Certain event bosses use rare summoning items with a five-second uninterrupted cast in the correct chamber.</p></article>
-      </div>
-      <div class="dungeon-detail">
-        <div><h3>Competitive PvE loot</h3><p>First-tag ownership is removed from ordinary monsters. Highest total damage by an individual, party or raid receives initial loot rights, which later become public.</p></div>
-        <div><h3>Valuable farming</h3><p>Dungeon gold is moderately increased while equipment remains uncommon. Higher-level equipment stays rarer so crafting and boss rewards retain value.</p></div>
-        <div><h3>Persistent resources</h3><p>Herbs and ore use shared pools and depletion cooldowns. Leaving and returning does not reset a node.</p></div>
-        <div><h3>Converted encounters</h3><p>Doors, progression blockers and event encounters are adapted for the shared-world model, but individual encounters still require continued testing.</p></div>
-      </div>
-    </section>
-
-    <section class="section section-shell split guild-section" id="guilds">
-      <aside class="talent-tree" aria-label="Guild skill tree concept">
-        <div class="tree-column"><h3>Might</h3><i>Damage</i><i>Health</i><i>Stability</i></div>
-        <div class="tree-column"><h3>Warding</h3><i>Defense</i><i>Resistance</i><i>Control Reduction</i></div>
-        <div class="tree-column"><h3>Restoration</h3><i>Mana</i><i>Regen</i><i>Recovery</i></div>
-      </aside>
-      <div class="split-copy">
-        <p class="eyebrow">Guild progression</p>
-        <h2>Guild growth is its own progression track.</h2>
-        <p>Guild experience is separate from spendable skill points. Members contribute through progression and PvE activities, while clan-war points remain a separate competitive resource.</p>
-        <ul class="check-list">
-          <li>Shared passive skills purchased by guild leaders.</li>
-          <li>Costs may include guild-bank gold and special materials.</li>
-          <li>Missing level, item, gold and prerequisite requirements are shown clearly.</li>
-          <li>Learned bonuses apply to all guild members.</li>
-          <li>Learned guild abilities appear in a dedicated Guild Skills spellbook tab.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="progress">
-      <div class="section-heading">
-        <p class="eyebrow">Development progress</p>
-        <h2>Private alpha, reported honestly.</h2>
-      </div>
-      <div class="progress-list">
-        <div><span>Core PvP and Karma system</span><b>Playable alpha</b></div>
-        <div><span>Clan wars</span><b>Playable alpha</b></div>
-        <div><span>PK equipment drops and graves</span><b>Playable alpha</b></div>
-        <div><span>Guild skills</span><b>Implemented · balancing/UI polish ongoing</b></div>
-        <div><span>Shared dungeon framework</span><b>Implemented across normal dungeons</b></div>
-        <div><span>Dungeon event conversions</span><b>Implemented · continued encounter testing</b></div>
-        <div><span>Gathering and respawn systems</span><b>Implemented</b></div>
-        <div><span>Damage-based loot ownership</span><b>Implemented</b></div>
-        <div><span>Experience debt</span><b>Implemented</b></div>
-      </div>
-    </section>
-
-    <section class="section section-shell alpha-notice" id="alpha">
-      <p class="eyebrow">Private alpha notice</p>
-      <h2>Evasion is not a public release.</h2>
-      <p>The project is currently in private alpha development. Systems listed as implemented or playable are still subject to testing, balancing, iteration and bug fixing. No public release date is being promised.</p>
-    </section>
-
-    <section class="section section-shell" id="faq">
-      <div class="section-heading compact">
-        <p class="eyebrow">FAQ</p>
-        <h2>Common questions.</h2>
-      </div>
-      <div class="faq-list">
-        <details><summary>Is Evasion currently playable?</summary><p>Core PvP, Karma, Clan Wars and PK-drop systems are in playable alpha states, but Evasion is still a private alpha project rather than a public release.</p></details>
-        <details><summary>How does Ctrl force-attacking work?</summary><p>Players are normally neutral with White names. Hold Ctrl to deliberately attack a neutral player; doing so flags the aggressor Purple.</p></details>
-        <details><summary>What happens when I kill an innocent player?</summary><p>You gain Karma and become Red. Repeated PK activity increases consequences, including the amount of inventory or equipped gear at risk when you die.</p></details>
-        <details><summary>Can Red players still trade and join parties?</summary><p>Yes. Red players remain socially functional and can trade, join parties and interact normally, although guards enforce PvP rules around settlements.</p></details>
-        <details><summary>Can party members attack each other?</summary><p>Party and raid members are protected from friendly fire.</p></details>
-        <details><summary>How do Clan Wars work?</summary><p>A guild leader declares war, the other side must accept, and the war continues until both sides agree to peace. War kills do not grant Karma or lifetime PK points.</p></details>
-        <details><summary>Are dungeons instanced?</summary><p>Supported normal dungeons use a shared-world model instead of private party copies. Raids remain separate from this rollout.</p></details>
-        <details><summary>Who receives monster loot?</summary><p>The individual, party or raid dealing the most total damage earns the initial loot rights. Loot becomes public after the protected period.</p></details>
-        <details><summary>Can PK players drop equipped items?</summary><p>Yes. Red players can drop inventory items and equipped gear, with greater lifetime PK totals increasing the number of items at risk.</p></details>
-        <details><summary>How does experience debt work?</summary><p>Normal PvE and PvP deaths can create debt. Earned experience pays off that debt before advancing normal experience. Duels do not cause experience loss and Clan War deaths use a reduced penalty.</p></details>
-        <details><summary>Is the server currently public?</summary><p>No. Evasion is currently in private alpha testing.</p></details>
+    <section class="join section-inner" id="join" aria-labelledby="join-title">
+      <p class="eyebrow">Closed alpha</p><h2 id="join-title">A few friends.<br>A world to test.</h2>
+      <p>Access is by invitation. The host creates your account and provides the client instructions and launcher. Public registration and downloads aren’t available yet.</p>
+      <div class="join-steps"><span><b>01</b> Get an invitation</span><span><b>02</b> Prepare the 3.3.5a client</span><span><b>03</b> Update, play, report what breaks</span></div>
+      <div class="faq">
+        <details><summary>Which client do I need?</summary><p>World of Warcraft 3.3.5a, build 12340, enUS. The launcher checks the executable and verifies the Evasion files before play.</p></details>
+        <details><summary>Can I download the launcher here?</summary><p>Not yet. The launcher is built, but its PC-hosted download feed and outside access still need configuring. Invited testers receive instructions directly from the host.</p></details>
+        <details><summary>Will my progress survive the alpha?</summary><p>Don’t treat alpha progress as permanent. Testing may require resets, balance changes or data recovery.</p></details>
+        <details><summary>Are all these systems finished?</summary><p>No. Implemented means the code is in place, not that every encounter, edge case or large battle has passed live testing.</p></details>
       </div>
     </section>
   </main>
-
-  <footer class="footer section-shell">
-    <div><img src="assets/evasion-logo.svg" alt="Evasion"><span>Private alpha · custom World of Warcraft 3.3.5a server</span></div>
-    <p>World of Warcraft® is a trademark of Blizzard Entertainment. Evasion is an independent custom server project and is not presented as an official World of Warcraft feature set.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="site-footer section-inner"><a class="brand" href="#home"><img src="assets/evasion-worlds-mark.png" width="35" height="35" alt=""><span>EVASION <small>WORLDS</small></span></a><p>Independent custom server project. Not affiliated with Blizzard Entertainment.<br>World of Warcraft is a trademark of Blizzard Entertainment.</p><span>Closed alpha · 2026</span></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
