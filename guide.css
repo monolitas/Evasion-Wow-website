@@ -28,7 +28,6 @@
 .ward-list{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:26px 0}
 .ward-list span{border-top:1px solid #ceb88944;padding-top:12px;color:var(--muted);font-size:11px}
 .ward-list strong{display:block;font:17px Georgia,serif;margin-top:4px;color:var(--gold)}
-.testing-label{display:inline-block;margin-left:10px;font-size:9px;letter-spacing:.08em;padding:2px 7px;border:1px solid #ceb88944;border-radius:2px;vertical-align:middle}
 .guide-details{border-top:1px solid var(--line)}
 .guide-details summary{padding:17px 0;cursor:pointer;font-size:14px;color:#d8c69f}
 .guide-details summary:hover{color:#f2dbaa}
