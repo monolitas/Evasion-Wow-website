@@ -1,0 +1,38 @@
+.guide-page .site-header{position:relative;background:var(--ink)}
+.guide-page .site-header nav a[aria-current=page]{color:var(--gold)}
+.guide-hero{position:relative;padding:100px 0 65px;border-bottom:1px solid var(--line)}
+.guide-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--ink),#171813a8,var(--ink)),url("assets/mist-world.png") center 45%/cover;opacity:.65}
+.guide-hero h1{font-size:clamp(44px,5.5vw,72px);line-height:1.12;letter-spacing:-.035em;margin-bottom:25px}
+.guide-hero>p:not(.eyebrow){max-width:610px}
+.guide-hero .guide-note{font-size:12px;color:#b6a681;margin-top:28px}
+.guide-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:85px;padding-top:60px}
+.guide-index nav{position:sticky;top:30px;padding:12px 0 30px;border-right:1px solid var(--line)}
+.guide-index .eyebrow{margin-bottom:17px}
+.guide-index a{display:block;padding:5px 20px 5px 0;font-size:12px;color:var(--muted);line-height:1.7}
+.guide-index a:hover{color:var(--gold)}
+.guide-section{padding:15px 0 45px;margin-bottom:38px;border-bottom:1px solid var(--line);scroll-margin-top:30px}
+.guide-section .eyebrow{margin-bottom:16px}
+.guide-section h2{font-size:clamp(29px,3vw,39px);line-height:1.22;margin-bottom:23px}
+.guide-section p{font-size:14px;line-height:1.85;margin-bottom:17px}
+.guide-section strong{font-weight:600;color:var(--paper)}
+.guide-section .guide-tip{font-size:12px;color:#bdad8b;border-left:2px solid #ceb88966;padding:4px 0 4px 17px;margin-top:25px;margin-bottom:0}
+.first-steps{margin:0;padding-left:23px;color:var(--muted);font-size:14px}
+.first-steps li{padding-left:9px;margin-bottom:17px}
+.first-steps li::marker{color:var(--gold)}
+.colour-key,.tax-key{margin:0 0 25px}
+.colour-key>div,.tax-key>div{padding:15px 0;border-bottom:1px solid var(--line)}
+.colour-key dt,.tax-key dt{font-size:14px;margin-bottom:4px}
+.colour-key dd,.tax-key dd{font-size:13px;color:var(--muted);line-height:1.75}
+.colour-key dd,.tax-key dd{margin:0}
+.state-white dt{color:#eceae4}.state-purple dt{color:#d2a0ea}.state-red dt{color:#e59a91}
+.ward-list{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:26px 0}
+.ward-list span{border-top:1px solid #ceb88944;padding-top:12px;color:var(--muted);font-size:11px}
+.ward-list strong{display:block;font:17px Georgia,serif;margin-top:4px;color:var(--gold)}
+.testing-label{display:inline-block;margin-left:10px;font-size:9px;letter-spacing:.08em;padding:2px 7px;border:1px solid #ceb88944;border-radius:2px;vertical-align:middle}
+.guide-details{border-top:1px solid var(--line)}
+.guide-details summary{padding:17px 0;cursor:pointer;font-size:14px;color:#d8c69f}
+.guide-details summary:hover{color:#f2dbaa}
+.guide-details p{font-size:13px;padding-left:17px;border-left:1px solid #ceb88933}
+.guide-end{padding:0 0 65px}.guide-end p{font-size:12px}
+@media(max-width:900px){.guide-layout{gap:40px;grid-template-columns:180px minmax(0,1fr)}.guide-hero{padding-top:70px}.ward-list{grid-template-columns:1fr;gap:10px}.ward-list span{display:flex;justify-content:space-between;align-items:center;gap:15px}.ward-list strong{margin:0}}
+@media(max-width:600px){.guide-layout{display:block;padding-top:30px}.guide-hero{padding:55px 0 35px}.guide-index nav{position:static;border:0;border-bottom:1px solid var(--line);margin-bottom:35px;display:flex;flex-wrap:wrap;gap:6px 20px}.guide-index .eyebrow{width:100%;margin-bottom:8px}.guide-index a{padding:3px 0;font-size:12px}.guide-section{padding-bottom:30px;margin-bottom:25px}.guide-section h2{font-size:30px}.guide-section p{font-size:14px}.guide-end{padding-bottom:40px}}
